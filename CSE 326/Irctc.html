@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>INDIAN RAILWAY</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(140, 141, 141);
+
+        }
+
+        /* NAVBAR Styleing */
+
+        ul {
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #c4bdbd;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+            font-size: 1.8rem;
+            /* z-index: -1; */
+            opacity: 0.900;
+        }
+
+        ul:hover {
+            list-style-type: none;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #383737;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+
+            top: 0;
+            font-size: 1.8rem;
+            /* z-index: -1; */
+            opacity: 0.899;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: inline-block;
+            color: rgb(7, 7, 7);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px #0a5a9c;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgb(216, 206, 206);
+        }
+
+        li a.active {
+            color: white;
+            background-color: rgb(27, 27, 27);
+        }
+
+        li a.active:hover {
+            color: rgb(252, 244, 244);
+            background-color: rgb(62, 63, 65);
+        }
+
+
+        /* Style the header */
+
+        header {
+
+            background-color: #666;
+
+            padding: 30px;
+
+            text-align: center;
+
+            font-size: 35px;
+
+            color: white;
+
+        }
+
+        .backimg img {
+            width: 1000px;
+            height: 500px;
+        }
+
+
+        /* Create two columns/boxes that floats next to each other */
+
+        #forms {
+
+            float: left;
+
+            width: 30%;
+
+            height: 350px;
+            /* only for demonstration, should be removed */
+
+            background: #ccc;
+
+            padding: 10px;
+
+        }
+
+
+        /* Style the list inside the menu */
+
+        forms ul {
+
+            list-style-type: none;
+
+            padding: 0;
+
+        }
+
+
+        article {
+
+            float: left;
+            font-size: 1.6rem;
+            padding: 20px;
+
+            width: 70%;
+
+            background-color: #a79d9d;
+
+            height: 320px;
+            /* only for demonstration, should be removed */
+
+        }
+
+
+        /* Clear floats after the columns */
+
+        section:after {
+
+            content: "";
+
+            display: table;
+
+            clear: both;
+
+        }
+
+
+        /* Style the footer */
+
+        footer {
+
+            background-color: #777;
+
+            padding: 10px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+        /* for meal */
+        #grad1 {
+            /* height: 200px; */
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(73, 138, 150), rgb(85, 182, 199), rgb(167, 142, 142), rgb(127, 171, 179), rgb(119, 170, 179), rgb(51, 153, 172), rgb(33, 93, 204));
+            /* Standard syntax (must be last) */
+        }
+
+        #meals {
+
+            margin: 10px;
+            display: flex;
+        }
+
+        #meals .box {
+            border: 2px solid brown;
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            background-color: rgb(134, 166, 226);
+        }
+
+        .i4th {
+            width: 410px;
+            height: 280px;
+            padding: 7px 5px 9px 5px;
+        }
+
+        .i5th {
+            width: 410px;
+            height: 280px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i6th {
+            width: 410px;
+            height: 280px;
+            padding: 8px -5px 7px 18px;
+        }
+
+        /* for Holiday package  */
+        #grad2 {
+            /* height: 200px; */
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(64, 138, 175), rgb(42, 90, 194));
+            /* Standard syntax (must be last) */
+        }
+
+        #holiday {
+
+            margin: 10px;
+            display: flex;
+        }
+
+        #holiday .box {
+            border: 2px solid brown;
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            background-color: rgb(134, 166, 226);
+        }
+
+        /* for services at stations  */
+        #grad3 {
+            /* height: 200px; */
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(116, 117, 117), rgb(117, 117, 122), rgb(85, 85, 87), rgb(47, 48, 48), rgb(8, 8, 8));
+            /* Standard syntax (must be last) */
+        }
+
+        #free {
+
+            margin: 10px;
+            display: flex;
+        }
+
+        #free .box {
+            border: 2px solid brown;
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            background-color: rgb(134, 166, 226);
+        }
+
+
+
+
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+
+                width: 100%;
+
+                height: auto;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <ul id="home">
+        <li><a class="active" href="#imgm">Home</a></li>
+
+        <li><a href="#grad1">MEALS</a></li>
+        <li><a href="#grad2">HOLIDAY PACKAGE </a></li>
+        <li><a href="#grad3">SERVICES AT STATION </a></li>
+        <li><a href="#forms">BOOK NOW</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+
+    <header>
+        <div class="backimg" id="imgm"> <img src="https://5.imimg.com/data5/WX/MM/MY-40171335/irctc-api-500x500.jpg"
+                alt="sorry connect your image first">
+        </div>
+
+    </header>
+
+
+    <section>
+        <style>
+            .text {
+                background-color: black;
+                color: blanchedalmond;
+                padding: 10px;
+                margin: -4px;
+                border-radius: 10px;
+            }
+        </style>
+
+        <nav id="forms">
+            <hr>
+
+            <H3>BOOK YOUR TICKET HERE</H3>
+            <hr>
+
+            <form>
+
+                <label for="fname"></label><br>
+
+                <input type="text" id="fname" class="text" name="fname" placeholder="From " ; " ><br>
+
+                <label for=" lname"></label><br>
+
+                <input type="text" id="lname" class="text" name="lname" placeholder="To"><br>
+
+                <label for="fname">dd-mm-yy:</label><br>
+
+                <input type="text" id="fname" class="text" name="fname"><br> <br>
+
+                <select id="CLASS" class="text">
+
+                    <option class="text" value="volvo">ALL CLASS</option>
+
+                    <option class="text" value="SLEEPER">SLEEPER</option>
+
+                    <option class="text" value="3AC">3AC</option>
+
+                    <option class="text" value="2AC">2AC</option>
+
+                </select><br>
+
+
+                <br> <a class="text" href="#home"
+                    style="color: rgb(24, 24, 23); background-color: darkgray; border: 2px solid black; text-decoration: none; font-size: 1.6rem ; padding: 5px; margin-top: 15px; border-radius: 18px; font-family: fantasy; ">SUBMIT</a>
+
+
+            </form>
+
+            </form>
+
+
+        </nav>
+
+
+        <article>
+
+            <h2>HOLIDAYS</h2>
+
+            <H1>TOURIST TRAIN</H1>
+
+            <H1>MAHARAJAS EXPRESS</H1>
+
+            <H1>NATIONAL PACKAGE</H1>
+
+        </article>
+
+    </section>
+
+    <section id="grad1">
+        <h1 style="font-family: fantasy; font-size: 2.8rem; text-align: center; background-color: rgb(42, 149, 153);">
+            LIP LICKING MEALS </h1>
+        <div id="meals">
+
+            <div class="box">
+                <img src="https://img.theweek.in/content/dam/week/news/sci-tech/2019/October/indian-railways-train-irctc-catering-trains-food-shut.jpg"
+                    class="i4th" alt="image is not avalaible yet">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> MIX MEALS </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://images.indianexpress.com/2018/06/irctc-indian-railways-food-menu-for-rails-app.jpg"
+                    alt="image is not avalaible yet" class="i5th">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> WIDE RANGE OF FOOD </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://4.bp.blogspot.com/-TSLBMF4qYE8/VZmPdjKawzI/AAAAAAAAAWg/TrS07_a9LSs/s1600/Indian-Railways-longest-running-non-stop-train.jpg"
+                    class="i6th ">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> BEST IN QUALITY</h2>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="grad2">
+        <h1 style="font-family: fantasy; font-size: 2.8rem; text-align: center; background-color: rgb(42, 149, 153);">
+            EXOTIC HOLIDAYS IN MAHARAJAS EXPRESS</h1>
+        <div id="holiday">
+
+            <div class="box">
+                <img src="https://www.maharajasexpress4u.com/wp-content/uploads/2019/09/maharajas-express-train-tj-vj-outside1-e1569691674260.jpg"
+                    class="i4th" alt="image is not avalaible yet">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> SPEND YOUR HOLIDAYS HERE </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://qph.fs.quoracdn.net/main-qimg-bbf38a4756e5b10901a41a40d5c4708c.webp"
+                    alt="image is not avalaible yet" class="i5th">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> SHINING INTERIOR </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://blog.the-maharajas.com/wp-content/uploads/2014/06/m-d-map.jpg" class="i6th ">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> VISIT TOP TOURIST PLACES OF INDIA
+                </h2>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="grad3">
+        <h1 style="font-family: fantasy; font-size: 2.8rem; text-align: center; background-color: rgb(42, 149, 153);">
+            WE PROVIDE BEST SERVICES</h1>
+        <div id="free">
+            <div class="box">
+                <img src="https://psuwatch.com/wp-content/uploads/2019/12/railwire-WiFi-psuwatch.jpg"
+                    alt="image is not avalaible yet" class="i5th">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> FREE WiFi by Google </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://i.ytimg.com/vi/B_-D_OeQI7c/hqdefault.jpg" alt="image is not avalaible yet"
+                    class="i5th">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);"> FREE WHEELCHAIR FACILITY </h2>
+
+            </div>
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLguJ7UbtoknKYGhrV9YNTRCPig8a7KUz-P9YA4Re5mMcFnwWk&usqp=CAU"
+                    class="i6th ">
+                <h2 class="h-secendary center" style="background: rgb(44, 172, 177);">CCTV SECURITY
+                </h2>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer id="contact" style="color: rgb(32, 32, 32) ; margin: auto;">
+        <h2> Full Support </h2>
+        <hr>
+        <h2> Name-Nitin Sinha </h2>
+        <h2> Name-Pranshi Dwivedi </h2>
+        <h2> Name-Ashish Prasad Gupta </h2>
+        <h2 style="color: rgb(116, 101, 18);">P.no 8789113801 , 7651877853 , 9113104378</h2>
+        <h2> <a href=""></a> </h2>
+        
+        <p>
+
+            Copyright © 2020 - www.irctc.co.in. All Rights Reserved
+
+            Designed and Hosted by CRIS</p>
+
+    </footer>
+
+</body>
+
+</html>
